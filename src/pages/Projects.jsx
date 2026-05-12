@@ -176,7 +176,7 @@ const FILTER_GROUPS = [
                   onClick={resetFilters}
                   className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <X className="w-3 h-3" /> Zrušiť filtre
+                  {/* <X className="w-3 h-3" /> Zrušiť filtre */}
                 </button>
                 <span className="text-xs text-muted-foreground">
                   {filtered.length} {filtered.length === 1 ? "projekt" : "projektov"}
