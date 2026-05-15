@@ -7,9 +7,14 @@ import { Mousewheel, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ArrowUpRight } from "lucide-react";
+
+
+import { useMediaQuery } from "react-responsive";
+
 import "swiper/css";
 import "swiper/css/free-mode";
 import ServiceCard from '../ui/karta'
+
 // import Link from "next/link";
 
 const projects = [
@@ -28,6 +33,12 @@ const CARD_WIDTH_MD = "clamp(180px, 28vw, 280px)";
 const CARD_WIDTH_SM = "clamp(220px, 70vw, 320px)";
 
 export default function ProjectsShowcase() {
+
+
+   
+
+    const isMobile = useMediaQuery({ maxWidth: 700 });
+
   const { tr } = useLang();
   const trackRef = useRef(null);
   const isDragging = useRef(false);
@@ -38,7 +49,14 @@ export default function ProjectsShowcase() {
 
   const [activeCard, setActiveCard] = useState(null);
 
+
+       const projekty = tr("projekty")
+
+       console.log(projekty);
+       
+
   // Scroll to middle slide on mount
+
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -113,22 +131,28 @@ export default function ProjectsShowcase() {
                   
 
       className="w-full pb-2"
-      style={{
-        paddingLeft: "max(16px, calc(50vw - 20vw - 6px))",
-        paddingRight: "max(16px, calc(50vw - 20vw - 6px))",
+     style={{
+        paddingLeft: isMobile
+          ? "16px"
+          : "max(16px, calc(50vw - 20vw - 6px))",
+
+        paddingRight: isMobile
+          ? "16px"
+          : "max(16px, calc(50vw - 20vw - 6px))",
       }}
     >
-      {projects.map((project,i) => (
+      {projekty.map((project,i) => (
   
 <SwiperSlide>
         <ServiceCard
+        onClick = {() => console.log("koko")}
               podmienka3 = "ano"
-        textotom = {project.desc}
-          rok = {project.year}
-               cotoje = {project.name}
+        textotom = {project.popis.kratky}
+          rok = {project.rok}
+               cotoje = {project.nazov}
                 podmienka = "nie"
-             cotoje2 = {project.category}
-             obrazok = {project.img}
+             cotoje2 = {project.kategoria}
+             obrazok = {project.imgMain}
 
 rozhoduje = {activeCard === i}
 

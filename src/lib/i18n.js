@@ -2,10 +2,433 @@
 
 export const translations = {
   sk: {
+   projekty :[
+  {
+    id: "Altura Casa",
+    slug:"altura-casa",
+    rok:"2025",
+    imgMain: "/projekty/AlturaCasa/alutra1.webp",
+    imgFull:"/projekty/AlturaCasa/MAIN.webp",
+    imgGallery: [
+    "/projekty/AlturaCasa/alutra2.webp",
+    "/projekty/AlturaCasa/alutra3.webp",
+    "/projekty/AlturaCasa/alutra4.webp",
+    "/projekty/AlturaCasa/alutra5.webp",
+    "/projekty/AlturaCasa/alutra6.webp",
+  ],
 
-    // projekty:{
+    nazov: "Altura Casa",
+    kategoria: "Interiérový dizajn",
+    style:"Moderný",
+    stav:"3D vizualizácia",
 
-    // }
+    popis: {
+      kratky:
+        "Altura Casa je moderný interiérový dizajn v pokojnej lokalite s dôrazom na čisté línie, funkčnosť a príjemnú atmosféru bývania v súčasnom štýle.",
+      dlhy:"Altura Casa je interiérový dizajn situovaný v pokojnom a modernom prostredí s dôrazom na estetiku a funkčnosť. Projekt je navrhnutý tak, aby spájal čisté línie, prirodzené materiály a komfort bývania, pričom orientácia a riešenie priestoru podporujú svetlosť a otvorenosť interiéru.",
+      dispozicia:"Altura Casa je interiérový dizajn navrhnutý s dôrazom na funkčné rozdelenie priestoru a plynulý pohyb medzi jednotlivými zónami. Vstupná časť prechádza do otvorenej haly, ktorá prepája hlavné obytné priestory a zároveň poskytuje prístup k úložným a technickým častiam interiéru. Dispozícia je riešená tak, aby jednotlivé miestnosti boli logicky usporiadané a podporovali komfort každodenného používania.",
+
+    },
+
+    benefity: [
+  "Moderný a nadčasový interiérový dizajn",
+  "Prepojenie estetiky a funkčnosti priestoru",
+  "Otvorená a vzdušná dispozícia interiéru",
+  "Použitie kvalitných prírodných materiálov",
+  "Dôraz na detail a čisté architektonické línie"
+    ],
+
+
+  // exterier:{
+  //   plocha:"192 ",
+  //   izby:"5",
+  //   podlazia:"2"
+
+  // },
+
+    specifikacie: {
+      typProjektu: "Rodinné domy na mieru",
+      typDomu: "Rodinný dom",
+      uzitkovaPlocha: "192 m²",
+      pocetIzieb: 5,
+      pocetPodlazi: 2,
+      garaz: "1 auto"
+    },
+
+   materialy: [
+  {
+    nazov: "Dubová dyha",
+    pouzitie: "Nábytok a obkladové steny"
+  },
+  {
+    nazov: "Mikrocement",
+    pouzitie: "Podlahy a kúpeľňa"
+  },
+  {
+    nazov: "Matné sklo",
+    pouzitie: "Interiérové priečky a dvere"
+  },
+  {
+    nazov: "Čierny kov",
+    pouzitie: "Konštrukčné a dizajnové prvky"
+  },
+  {
+    nazov: "Veľkoformátová dlažba",
+    pouzitie: "Kuchyňa a obytný priestor"
+  }
+],
+    dispozicia: {
+      popis:
+        "Hlavný vstup do domu je situovaný na juhozápadnej strane a vedie do vstupnej haly so šatníkom, ktorá poskytuje prístup do kúpeľne. Z haly sú prístupné práčovňa, technická miestnosť, garáž a sklad."
+    },
+
+
+   
+    dokumentacia: {
+      otazka: "Čo obsahuje projektová dokumentácia?",
+      odpoved:
+        "Projektová dokumentácia obsahuje všetky nevyhnutné informácie pre získanie stavebného povolenia vrátane statiky, elektroinštalácií, vodovodu a kúrenia."
+    }
+  },
+  
+  {
+    id: "Intermezzo",
+    slug: "intermezzo",
+     rok:"2024",
+    imgMain: "/projekty/Intermezzo/Intermezzo.webp",
+    imgFull: "/projekty/Intermezzo/Main.webp",
+    imgGallery: [
+      "/projekty/Intermezzo/Intermezzo.webp",
+      "/projekty/Intermezzo/Intermezzo2.webp",
+      "/projekty/Intermezzo/Intermezzo3.webp",
+      "/projekty/Intermezzo/Intermezzo4.webp",
+      "/projekty/Intermezzo/Intermezzo5.webp",
+    ],
+
+    nazov: "Intermezzo",
+    kategoria: "Interiérový dizajn",
+    style: "Luxusný moderný",
+    stav: "3D vizualizácia",
+
+    popis: {
+      kratky:
+        "Intermezzo predstavuje sofistikovaný prienik medzi luxusom a útulnosťou, kde tmavé textúry dreva a mramoru vytvárajú scénický priestor pre moderný život.",
+      dlhy: "Projekt Intermezzo je navrhnutý ako vizuálna prestávka od vonkajšieho sveta. Interiér stavia na kontraste surových prírodných textúr a precíznych detailov. Dominantné drevené obklady stien a stropov v kombinácii s bielymi plochami a dizajnovým osvetlením vytvárajú dramatickú, no zároveň upokojujúcu atmosféru.",
+      dispozicia: "Spoločenská zóna je riešená ako otvorený priestor, ktorému dominuje obývacia časť s integrovaným multimediálnym panelom. Prepojenie materiálov prechádza plynule z vertikálnych plôch na horizontálne, čím opticky zjednocuje celú dennú časť a vytvára nerušený tok pohybu.",
+    },
+
+    benefity: [
+      "Exkluzívna kombinácia tmavého dreva a kameňa",
+      "Dizajnové solitérne prvky a umelecké inštalácie",
+      "Skryté úložné systémy integrované do stien",
+      "Náladové podsvietenie a moderné svetelné línie",
+      "Maximálne využitie prirodzeného svetla v kontraste s tmavými dekormi"
+    ],
+
+    // Upravené parametre čisto pre interiér
+    interier: {
+      plocha: "145",
+      miestnosti: "4",
+      typ: "Bytový interiér"
+    },
+
+    specifikacie: {
+      typProjektu: "Interiér na mieru",
+      lokalita: "Mestské prostredie",
+      uzitkovaPlocha: "145 m²",
+      pocetMiestnosti: 4,
+      urovenZariadenia: "Premium",
+      dobaRealizacie: "4 – 6 mesiacov"
+    },
+
+    materialy: [
+      {
+        nazov: "Orechová dýha",
+        pouzitie: "Stropné a stenné obklady"
+      },
+      {
+        nazov: "Čierny mramor",
+        pouzitie: "Konferenčné stolíky a detaily"
+      },
+      {
+        nazov: "Leštený betón / Terazzo",
+        pouzitie: "Podlahy v dennej časti"
+      },
+      {
+        nazov: "Tkaný koberec s textúrou",
+        pouzitie: "Zmäkčenie akustiky v obývacej izbe"
+      },
+      {
+        nazov: "Zrkadlové plochy",
+        pouzitie: "Optické zväčšenie priechodov"
+      }
+    ],
+
+    dispozicia: {
+      popis:
+        "Centrálnym bodom interiéru je obývacia izba prepojená s chodbou cez vysoké zrkadlové a nábytkové steny. Umiestnenie nábytku podporuje spoločenský charakter priestoru a otvára výhľad na umelecké solitéry."
+    },
+
+    dokumentacia: {
+      otazka: "Čo zahŕňa návrh interiéru?",
+      odpoved:
+        "Kompletný návrh obsahuje fotorealistické 3D vizualizácie, výkresy nábytku na mieru, kladačské plány podláh, špecifikáciu materiálov, svietidiel a zariaďovacích prvkov."
+    }
+  },
+
+  {
+    id: "SkyPark Koncept",
+    slug: "skypark-koncept",
+     rok:"2024",
+    imgMain: "/projekty/SkyParkKoncept/SkyParkKoncept1.webp",
+    imgFull: "/projekty/SkyParkKoncept/main.webp",
+    imgGallery: [
+      "/projekty/SkyParkKoncept/SkyParkKoncept1.webp",
+      "/projekty/SkyParkKoncept/SkyParkKoncept2.webp",
+      "/projekty/SkyParkKoncept/SkyParkKoncept3.webp",
+      "/projekty/SkyParkKoncept/SkyParkKoncept4.webp",
+      "/projekty/SkyParkKoncept/SkyParkKoncept5.webp",
+    ],
+
+    nazov: "SkyPark Koncept",
+    kategoria: "Interiérový dizajn",
+    style: "Futuristický mestský",
+    stav: "3D vizualizácia",
+
+    popis: {
+      kratky:
+        "SkyPark Koncept prináša víziu moderného bývania v ikonickej architektúre, kde sa organické tvary stretávajú s funkčným minimalizmom.",
+      dlhy: "Tento projekt interiéru bol navrhnutý s ohľadom na unikátny charakter lokality Sky Park. Cieľom bolo vytvoriť nadčasový priestor, ktorý reflektuje dynamiku mesta, ale zároveň poskytuje útočisko plné svetla a čistoty. Interiér využíva plynulé línie a technologicky vyspelé materiály, ktoré podčiarkujú futuristický nádych celého konceptu.",
+      dispozicia: "Otvorená dispozícia dennej časti maximalizuje panoramatické výhľady. Kuchynský ostrov plynule prechádza do jedálenského sedenia, zatiaľ čo obývacia zóna je orientovaná tak, aby prirodzene komunikovala s vonkajšou loggiou. Nočná časť je diskrétne oddelená, čím zabezpečuje maximálne súkromie.",
+    },
+
+    benefity: [
+      "Unikátny dizajn rešpektujúci organickú architektúru budovy",
+      "Inteligentné riešenia osvetlenia a Smart Home integrácia",
+      "Panoramatické presklenia s dôrazom na mestskú scenériu",
+      "Využitie prémiových kompozitných materiálov",
+      "Ergonomické rozvrhnutie priestoru pre aktívny mestský život"
+    ],
+
+    interier: {
+      plocha: "98",
+      miestnosti: "3",
+      typ: "Prémiový apartmán"
+    },
+
+    specifikacie: {
+      typProjektu: "Interiér apartmánu",
+      lokalita: "Bratislava - Sky Park",
+      uzitkovaPlocha: "98 m²",
+      pocetMiestnosti: 3,
+      urovenZariadenia: "High-end",
+      dobaRealizacie: "3 – 5 mesiacov"
+    },
+
+    materialy: [
+      {
+        nazov: "Kameň Corian",
+        pouzitie: "Pracovné dosky a bezšvové detaily"
+      },
+      {
+        nazov: "Svetlý dub",
+        pouzitie: "Podlahy v celom apartmáne"
+      },
+      {
+        nazov: "Brúsený hliník",
+        pouzitie: "Dekoratívne lišty a úchytky"
+      },
+      {
+        nazov: "Saténové sklo",
+        pouzitie: "Šatníkové systémy a priečky"
+      },
+      {
+        nazov: "Stierka s betónovým efektom",
+        pouzitie: "Akcentové steny v spálni"
+      }
+    ],
+
+    dispozicia: {
+      popis:
+        "Vstupná zóna je navrhnutá s integrovaným úložným priestorom, ktorý opticky splýva so stenou. Srdcom apartmánu je presvetlený open-plan priestor spájajúci obývačku s minimalistickou kuchyňou."
+    },
+
+    dokumentacia: {
+      otazka: "Čo získate v rámci štúdie SkyPark Koncept?",
+      odpoved:
+        "Získate ucelenú dizajnovú štúdiu vrátane dispozičného riešenia, fotorealistických vizualizácií, výberu konkrétnych materiálov a predbežného rozpočtu realizácie."
+    }
+  },
+
+  {
+    id: "Vydrica Koncept",
+    slug: "vydrica-koncept",
+     rok:"2025",
+    imgMain: "/projekty/VydricaKoncept/main.webp",
+    imgFull: "/projekty/VydricaKoncept/main.webp",
+    imgGallery: [
+      "/projekty/VydricaKoncept/vydricakoncept.webp",
+      "/projekty/VydricaKoncept/vydricakoncept2.webp",
+      "/projekty/VydricaKoncept/vydricakoncept3.webp",
+      "/projekty/VydricaKoncept/vydricakoncept4.webp",
+      "/projekty/VydricaKoncept/vydricakoncept5.webp",
+    ],
+
+    nazov: "Vydrica Koncept",
+    kategoria: "Interiérový dizajn",
+    style: "Nadčasová elegancia",
+    stav: "3D vizualizácia",
+
+    popis: {
+      kratky:
+        "Vydrica Koncept prepája historický genius loci s moderným komfortom, pričom vytvára harmonický priestor pre náročného mestského užívateľa.",
+      dlhy: "Návrh interiéru pre projekt Vydrica reflektuje prestížnu lokalitu v podhradí. Cieľom bolo vytvoriť prostredie, ktoré pôsobí luxusne, ale zároveň prirodzene. Interiér stavia na poctivých materiáloch a tlmenej farebnej palete, ktorá necháva vyniknúť architektúru priestoru a výhľady na Dunaj či historické centrum.",
+      dispozicia: "Dispozičné riešenie kladie dôraz na plynulý prechod medzi dennou a nočnou časťou. Hlavný obytný priestor s kuchyňou a jedálňou tvorí srdce domova, zatiaľ čo spálňový trakt s vlastnou kúpeľňou poskytuje maximálnu mieru súkromia a relaxácie.",
+    },
+
+    benefity: [
+      "Sofistikovaný dizajn v lukratívnej lokalite pod hradom",
+      "Prémiové materiálové vyhotovenie s dôrazom na haptiku",
+      "Integrované smart technológie pre moderný životný štýl",
+      "Vysoká miera presvetlenia a vzdušnosť interiéru",
+      "Detailne prepracované nábytkové prvky na mieru"
+    ],
+
+    interier: {
+      plocha: "112",
+      miestnosti: "3",
+      typ: "Mestský apartmán"
+    },
+
+    specifikacie: {
+      typProjektu: "Interiér apartmánu",
+      lokalita: "Bratislava - Vydrica",
+      uzitkovaPlocha: "112 m²",
+      pocetMiestnosti: 3,
+      urovenZariadenia: "Premium Plus",
+      dobaRealizacie: "4 – 5 mesiacov"
+    },
+
+    materialy: [
+      {
+        nazov: "Prírodný kameň Travertín",
+        pouzitie: "Kúpeľne a akcentové steny"
+      },
+      {
+        nazov: "Kartáčovaný dub",
+        pouzitie: "Drevené parkety a obklady"
+      },
+      {
+        nazov: "Mosadzné prvky",
+        pouzitie: "Svietidlá a dekoratívne kovanie"
+      },
+      {
+        nazov: "Látkové tapety",
+        pouzitie: "Zútulnenie nočnej časti"
+      },
+      {
+        nazov: "Tónované sklo",
+        pouzitie: "Deliace priečky a šatníky"
+      }
+    ],
+
+    dispozicia: {
+      popis:
+        "Vstupná hala s minimalistickým šatníkom otvára cestu do priestrannej obývacej izby. Dispozícia je navrhnutá tak, aby každý štvorcový meter slúžil komfortu obyvateľov bez zbytočných bariér."
+    },
+
+    dokumentacia: {
+      otazka: "Čo zahŕňa realizačný projekt Vydrica Koncept?",
+      odpoved:
+        "Projekt zahŕňa detailné výkresy pre remeselníkov, výkaz výmer materiálov, presnú špecifikáciu sanity a armatúr, ako aj autorský dozor počas realizácie."
+    }
+  },
+
+  {
+    id: "Rosso Earth Koncept",
+    slug: "rosso-earth-koncept",
+     rok:"2026",
+    imgMain: "/projekty/RossoEarthKoncept/main.webp",
+    imgFull: "/projekty/RossoEarthKoncept/main.webp",
+    imgGallery: [
+      "/projekty/RossoEarthKoncept/prva.webp",
+      "/projekty/RossoEarthKoncept/druha.webp",
+      "/projekty/RossoEarthKoncept/tretia.webp",
+      "/projekty/RossoEarthKoncept/stvrta.webp",
+      "/projekty/RossoEarthKoncept/piata.webp",
+    ],
+
+    nazov: "Rosso Earth Koncept",
+    kategoria: "Interiérový dizajn",
+    style: "Organický luxus",
+    stav: "3D vizualizácia",
+
+    popis: {
+      kratky:
+        "Rosso Earth Koncept je oslavou surových materiálov a hlbokých farebných tónov, ktoré vytvárajú intímny a vysoko estetický obytný priestor.",
+      dlhy: "Interiér projektu Rosso Earth je postavený na kontraste tmavého dreva a dramatického červeného mramoru, ktorý dominuje barovej časti. Celkový koncept čerpá inšpiráciu zo zemitých pigmentov a prírodných štruktúr. Mäkké čalúnenie v pieskových odtieňoch vyvažuje tvrdosť kameňa a dreva, čím v priestore nastoľuje vizuálnu rovnováhu a pocit absolútneho komfortu.",
+      dispozicia: "Denná zóna plynule spája relaxačnú časť s barovým sedením, čím podporuje spoločenský charakter interiéru. Kuchynský kút s výrazným mramorovým obkladom slúži ako vizuálny akcent, ktorý je viditeľný z každého uhla miestnosti a dodáva priestoru hĺbku.",
+    },
+
+    benefity: [
+      "Výrazná estetika s použitím vzácneho červeného mramoru",
+      "Harmónia prírodných materiálov a organických textúr",
+      "Sofistikovaná atmosféra dosiahnutá tlmenou paletou",
+      "Dizajnové barové sedenie s prírodným výpletom",
+      "Dôraz na haptické vnímanie priestoru a útulnosť"
+    ],
+
+    interier: {
+      plocha: "128",
+      miestnosti: "4",
+      typ: "Rezidenčný interiér"
+    },
+
+    specifikacie: {
+      typProjektu: "Interiér na mieru",
+      lokalita: "Mestská rezidencia",
+      uzitkovaPlocha: "128 m²",
+      pocetMiestnosti: 4,
+      urovenZariadenia: "Premium Custom",
+      dobaRealizacie: "5 – 7 mesiacov"
+    },
+
+    materialy: [
+      {
+        nazov: "Červený mramor Rosso",
+        pouzitie: "Barový pult a kuchynská zástena"
+      },
+      {
+        nazov: "Tmavý morený dub",
+        pouzitie: "Vstavané skrine a obklady stien"
+      },
+      {
+        nazov: "Prútený výplet",
+        pouzitie: "Detail barových stoličiek"
+      },
+      {
+        nazov: "Hrubo tkaný textil",
+        pouzitie: "Sofa a dekoračné vankúše"
+      },
+      {
+        nazov: "Brúsený nerez",
+        pouzitie: "Digestor a funkčné prvky kuchyne"
+      }
+    ],
+
+    dispozicia: {
+      popis:
+        "Vstup do dennej zóny odkrýva panoramatický pohľad na barovú časť, ktorá je integrovaná do obytného priestoru. Nábytkové zostavy sú navrhnuté tak, aby plynule prechádzali zo stien do funkčných prvkov."
+    },
+
+    dokumentacia: {
+      otazka: "Čo zahŕňa vizuálny koncept Rosso Earth?",
+      odpoved:
+        "Zahŕňa kompletnú materiálovú mapu, svetelný dizajn, výber solitérneho nábytku a detailné 3D vizualizácie všetkých obytných miestností."
+    }
+  }
+],
+
 
 
 
@@ -217,16 +640,18 @@ export const translations = {
       light: "Svetlý",
     },
     servicePage: {
+
       interior: {
         label: "Interiérový dizajn",
         headline: "Priestory, ktoré inšpirujú",
         sub: "Navrhujeme interiéry, ktoré odrážajú váš životný štýl — od konceptu cez výber materiálov až po kompletnú realizáciu.",
         included: ["Úvodná konzultácia a analýza priestoru", "Dispozičné a funkčné riešenie", "Výber materiálov, farieb a povrchov", "3D vizualizácie a renderingy", "Návrh osvetlenia a elektroinštalácie", "Koordinácia a dohľad pri realizácii"],
         gallery: [
-          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=85",
-          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=85",
-          "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=900&q=85",
-          "https://images.unsplash.com/photo-1556912173-3bb406ef7e8a?w=900&q=85",
+       "/projekty/RossoEarthKoncept/prva.webp",
+         "/projekty/AlturaCasa/alutra5.webp",
+       "/projekty/Intermezzo/Intermezzo3.webp",
+ "/projekty/VydricaKoncept/vydricakoncept3.webp",
+        
         ],
         process: [
           { title: "Úvodná konzultácia", time: "1 týždeň", desc: "Zoznámime sa, preberieme vaše predstavy a analyzujeme priestor." },
@@ -235,16 +660,17 @@ export const translations = {
           { title: "Realizácia", time: "4–12 týždňov", desc: "Koordinujeme remeselníkov a dohliadame na priebeh prác." },
         ],
       },
+
       commercial: {
         label: "Komerčný dizajn",
         headline: "Priestory, ktoré predávajú",
         sub: "Navrhujeme komerčné priestory s dôrazom na funkčnosť, identitu značky a zážitok zákazníka.",
         included: ["Analýza prevádzky a zákazníkov", "Konceptuálny návrh priestoru", "Brand identity integrácia", "Technické riešenie (osvetlenie, akustika)", "3D vizualizácie a renderingy", "Koordinácia a dohľad pri realizácii"],
         gallery: [
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85",
-          "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&q=85",
-          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=85",
-          "https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=900&q=85",
+          "/projekty/RossoEarthKoncept/prva.webp",
+         "/projekty/AlturaCasa/alutra5.webp",
+       "/projekty/Intermezzo/Intermezzo3.webp",
+ "/projekty/VydricaKoncept/vydricakoncept3.webp",
         ],
         process: [
           { title: "Analýza a brief", time: "1 týždeň", desc: "Pochopíme vašu značku, zákazníkov a prevádzkové požiadavky." },
@@ -259,10 +685,10 @@ export const translations = {
         sub: "Navrhujeme vonkajšie priestory, fasády a záhradné koncepty, ktoré tvoria harmonický celok s architektúrou domu.",
         included: ["Analýza pozemku a okolia", "Konceptuálny návrh exteriéru", "Návrh fasády a materiálového riešenia", "Záhradná a krajinná architektúra", "Osvetlenie exteriéru", "Koordinácia pri realizácii"],
         gallery: [
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=85",
-          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85",
-          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=85",
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85",
+         "/projekty/RossoEarthKoncept/prva.webp",
+         "/projekty/AlturaCasa/alutra5.webp",
+       "/projekty/Intermezzo/Intermezzo3.webp",
+ "/projekty/VydricaKoncept/vydricakoncept3.webp",
         ],
         process: [
           { title: "Obhliadka a analýza", time: "1 týždeň", desc: "Navštívime pozemok, analyzujeme orientáciu, okolitú zástavbu a podmienky." },

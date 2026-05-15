@@ -4,10 +4,11 @@ import { ArrowUpRight } from "lucide-react";
 import { useLang } from "../../lib/LangContext";
 
 const grid = [
-  "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=500&q=80",
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=80",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80",
-  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80",
+   "/projekty/AlturaCasa/alutra2.webp",
+    "/projekty/Intermezzo/Intermezzo.webp",
+    "/projekty/SkyParkKoncept/SkyParkKoncept4.webp",
+          "/projekty/VydricaKoncept/vydricakoncept4.webp",
+  
 ];
 
 export default function InstagramSection() {

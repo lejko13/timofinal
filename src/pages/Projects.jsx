@@ -66,6 +66,10 @@ const emptyFilters = { type: null, style: null, status: null, usage: null };
 export default function Projects() {
   const { tr } = useLang();
 
+  const projekty = tr("projekty")
+
+  console.log(projekty);
+  
 
 const FILTER_GROUPS = [
   {
@@ -296,18 +300,18 @@ const FILTER_GROUPS = [
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {filtered.map((project) => (
+                  {projekty.map((project,i) => (
                     <Link key={project.slug} to={`/projekty/${project.slug}`} className="group block">
                       <div className="relative rounded-2xl overflow-hidden bg-secondary aspect-[4/3]">
                         <img
-                          src={project.img}
-                          alt={project.name}
+                          src={project.imgMain}
+                          alt={project.nazov}
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                         <div className="absolute top-4 left-4">
                           <span className="text-xs font-medium text-white/70 bg-black/35 backdrop-blur-sm px-2.5 py-1.5 rounded-full border border-white/10">
-                            {project.category}
+                            {project.kategoria}
                           </span>
                         </div>
                         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-250 translate-x-1 group-hover:translate-x-0">
@@ -316,12 +320,14 @@ const FILTER_GROUPS = [
                           </div>
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 p-5">
-                          <p className="text-white font-semibold tracking-tight">{project.name}</p>
-                          <div className="flex items-center gap-3 mt-1">
-                            {project.area   && <span className="text-white/45 text-xs">{project.area} m²</span>}
-                            {project.rooms  && <span className="text-white/45 text-xs">{project.rooms} izieb</span>}
-                            {project.floors && <span className="text-white/45 text-xs">{project.floors}</span>}
-                          </div>
+                          <p className="text-white font-semibold tracking-tight">{project.nazov}</p>
+
+                          {project.exterier &&   <div className="flex items-center gap-3 mt-1">
+                            <span className="text-white/45 text-xs">{project.exterier.plocha} m²</span>
+                       <span className="text-white/45 text-xs">{project.exterier.izby} izieb</span>
+                      <span className="text-white/45 text-xs">{project.exterier.podlazia} podlazia</span>
+                          </div> }
+                        
                         </div>
                       </div>
                     </Link>

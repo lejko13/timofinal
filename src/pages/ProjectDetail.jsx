@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Lightbox from "../components/Lightbox";
 import { ArrowUpRight, Layers, Home, Maximize, BedDouble, Building2, Car } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
+import { useLang ,} from "../lib/LangContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const project = {
@@ -26,6 +29,8 @@ const project = {
 
 };
 
+
+
 const processSteps = [
 { title: "Úvodná konzultácia", time: "1–2 týždne", desc: "Stretneme sa, obhliadneme pozemok a preberieme vaše predstavy." },
 { title: "Architektonická štúdia", time: "4–6 týždňov", desc: "Vypracujeme návrh s ohľadom na funkciu, štýl a rozpočet." },
@@ -44,31 +49,86 @@ const specs = [
 
 
 export default function ProjectDetail() {
+    const { slug } = useParams();
+
+    const { tr } = useLang();
+      const projekty = tr("projekty")
+//  console.log(projekty);
+ 
+
+      
+
+     const project = projekty.find((p) => p.slug === slug);
+     const toto = project.benefity
+     const materialy = project.materialy
+
+     console.log(materialy);
+     
+
   const [lbIndex, setLbIndex] = useState(null);
-  const { images } = project;
-  const nextImg = () => setLbIndex((lbIndex + 1) % images.length);
-  const prevImg = () => setLbIndex((lbIndex - 1 + images.length) % images.length);
+  const[otovrenie,setOtvorenie] = useState(null)
+const images = project?.imgGallery ?? [];
+ const nextImg = () => {
+  if (!images.length) return;
+
+  setLbIndex((lbIndex + 1) % images.length);
+};
+
+const prevImg = () => {
+  if (!images.length) return;
+
+  setLbIndex((lbIndex - 1 + images.length) % images.length);
+};
 
   return (
     <div className="min-h-screen bg-background">
+
+
+      <motion.div
+ initial={{ opacity: 0 }}
+  animate={{
+    opacity: otovrenie ? 1 : 0,
+  }}
+  transition={{
+    duration: 0.25,
+    ease: "easeInOut",
+  }}
+  className={`
+    fixed inset-0 z-40 bg-background/20 backdrop-blur-md
+    ${otovrenie ? "pointer-events-auto" : "pointer-events-none"}
+  `}
+/>
+
+
       <Navbar />
 
       {/* Hero */}
       <section className="relative h-[70vh] md:h-screen flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img src={project.img} alt={project.name} className="w-full h-full object-cover" />
+          <img src={project.imgFull} alt={project.name} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-black/25 to-transparent" />
         </div>
         <div className="relative z-10 max-w-screen-xl mx-auto px-6 lg:px-16 w-full pb-12">
-          <p className="text-white/45 text-sm mb-2">{project.houseType} — {project.category}</p>
-          <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tighter mb-5">{project.name}</h1>
-          <div className="flex flex-wrap gap-2.5">
-            {[`${project.area} m²`, project.floors, `${project.rooms} izieb`].map((tag) =>
-            <span key={tag} className="px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white/75 text-sm">
-                {tag}
-              </span>
-            )}
+          <p className="text-white/45 text-sm mb-2">{project.kategoria} — {project.style} — {project.stav}</p>
+          <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tighter mb-5">{project.nazov}</h1>
+          
+          {project.exterier &&
+           <div className="flex flex-wrap gap-2.5">
+                        {[
+                  `${project.exterier?.plocha} m²`,
+                  `${project.exterier?.izby} izieb`,
+                  `${project.exterier?.podlazia} podlažia`
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white/75 text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
           </div>
+        }
+         
         </div>
       </section>
 
@@ -98,15 +158,16 @@ export default function ProjectDetail() {
 
           {/* Main content */}
           <div className="order-1 lg:order-2 space-y-14">
-            <p className="text-foreground/70 leading-relaxed text-base md:text-lg">{project.description}</p>
+            <p className="text-foreground/70 leading-relaxed text-base md:text-lg">{project.popis.dlhy}</p>
 
             {/* Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {images.map((img, i) =>
+              {project.imgGallery.map((img, i) =>
+              
               <div
                 key={i}
                 className={`rounded-xl overflow-hidden cursor-pointer group bg-secondary ${i === 0 ? "col-span-2 aspect-video" : "aspect-[4/3]"}`}
-                onClick={() => setLbIndex(i)}>
+                onClick={() => {setLbIndex(i),setOtvorenie(true)}}>
                 
                   <img src={img} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -116,14 +177,14 @@ export default function ProjectDetail() {
             {/* Layout */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">Dispozičné riešenie</h2>
-              <p className="text-foreground/65 leading-relaxed text-sm">{project.layout}</p>
+              <p className="text-foreground/65 leading-relaxed text-sm">{project.popis.dispozicia}</p>
             </div>
 
             {/* Benefits */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-5">Kľúčové benefity</h2>
               <ul className="space-y-3">
-                {project.benefits.map((b, i) =>
+                {toto.map((b, i) => 
                 <li key={i} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 shrink-0" />
                     <span className="text-foreground/65 text-sm leading-relaxed">{b}</span>
@@ -136,9 +197,20 @@ export default function ProjectDetail() {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-5">Použité materiály</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {project.materials.map((m, i) =>
-                <div key={i} className="px-4 py-3 bg-secondary border border-border rounded-xl text-sm text-foreground/75">{m}</div>
-                )}
+             {materialy.map((m, i) => (
+                <div
+                  key={i}
+                  className="px-4 py-3 bg-secondary border border-border rounded-xl"
+                >
+                  <h3 className="text-sm font-medium text-foreground">
+                    {m.nazov}
+                  </h3>
+
+                  <p className="text-sm text-foreground/75 mt-1">
+                    {m.pouzitie}
+                  </p>
+                </div>
+              ))}
               </div>
             </div>
 
@@ -172,7 +244,10 @@ export default function ProjectDetail() {
 
       <AnimatePresence>
         {lbIndex !== null &&
-        <Lightbox images={images} index={lbIndex} onClose={() => setLbIndex(null)} onNext={nextImg} onPrev={prevImg} />
+        <Lightbox
+        setter = {setOtvorenie}
+         images={project.imgGallery} index={lbIndex}
+          onClose={() => {setLbIndex(null),setOtvorenie(false)}} onNext={nextImg} onPrev={prevImg} />
         }
       </AnimatePresence>
 

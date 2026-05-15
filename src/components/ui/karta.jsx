@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function ServiceCard({
  i,
   activeCard,
+  onClick,
   obrazok,
   cotoje,
   cotoje2,
@@ -24,6 +25,8 @@ export default function ServiceCard({
     <motion.div
       onMouseEnter={otovrim}
       onMouseLeave={zatvorim}
+      onClick={onClick}
+
     
       // variants={cardVariants}
       initial="hidden"
@@ -145,3 +148,5 @@ export default function ServiceCard({
     </motion.div>
   );
 }
+
+

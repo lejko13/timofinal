@@ -97,14 +97,14 @@ export default function Navbar() {
     ease: "easeInOut",
   }}
   className={`
-    fixed inset-0 z-20 bg-background/20 backdrop-blur-md
+    fixed inset-0 z-10 bg-background/20 backdrop-blur-md
     ${servicesOpen ? "pointer-events-auto" : "pointer-events-none"}
   `}
 />
       {/* ── NAV BAR ── */}
       <nav
         ref={navRef}
-     className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-background border border-border rounded-2xl w-[calc(100%-2rem)] lg:max-w-[1160px]">
+     className="fixed top-4 left-1/2 -translate-x-1/2 z-20 bg-background border border-border rounded-2xl w-[calc(100%-2rem)] lg:max-w-[1160px]">
         
         <div className=" mx-auto pr-6 pl-2 h-[64px] flex items-center justify-between">
 

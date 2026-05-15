@@ -2,13 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function Lightbox({ images, index, onClose, onNext, onPrev }) {
+export default function Lightbox({ images, index, onClose, onNext, onPrev,setter }) {
   const [dragging, setDragging] = useState(false);
   const touchStartX = useRef(null);
   const dragStartX = useRef(null);
   const [dragDelta, setDragDelta] = useState(0);
 
   // Keyboard navigation
+  console.log(setter);
+  
   useEffect(() => {
     const handler = (e) => {
       if (e.key === "ArrowRight") onNext();
@@ -114,7 +116,7 @@ export default function Lightbox({ images, index, onClose, onNext, onPrev }) {
             animate={{ opacity: 1, scale: 1, x: dragging ? dragDelta * 0.3 : 0 }}
             exit={{ opacity: 0, scale: 0.97 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="max-h-full max-w-full object-contain rounded-lg px-16 py-2"
+            className="max-h-full max-w-ful object-contain rounded-lg  bg-red-300"
             draggable={false}
           />
         </AnimatePresence>

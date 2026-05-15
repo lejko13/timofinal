@@ -96,10 +96,18 @@ export default function ServicePage({ serviceKey, heroImg }) {
               {gallery.map((img, i) => (
                 <div
                   key={i}
-                  className={`rounded-xl overflow-hidden cursor-pointer group bg-secondary ${i === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"}`}
-                  onClick={() => setLbIndex(i)}
+                  className={`rounded-xl relative overflow-hidden cursor-pointer group bg-secondary ${i === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"}`}
+                  // onClick={() => setLbIndex(i)}
                 >
-                  <img src={img} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                   <div
+                        className="w-full h-full absolute inset-x-0 z-10"
+                        style={{
+                          background:
+                            "linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.4) 70%, hsl(var(--background) / 0.7) 100%)",
+                        }}
+                      />
+                  <img src={img} alt="" className="w-full h-full object-cover " />
+        
                 </div>
               ))}
             </div>
