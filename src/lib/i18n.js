@@ -477,28 +477,32 @@ export const translations = {
       sub: "Spájame architektonický ateliér s vlastnou stavebnou firmou. Vďaka tomu vás prevedieme celým procesom.",
       more: "Zobraziť viac",
       cta: "Mám záujem",
+
+
       items: [
         {
           num: "01",
           title: "Interiérový dizajn",
-            obrazok:"/interierdesing.webp",
+            obrazok:"/projekty/AlturaCasa/alutra5.webp",
           desc: "Komplexný návrh interiéru od konceptu po realizáciu. Bytové interiéry, dispozičné riešenia, výber materiálov a 3D vizualizácie.",
           tags: ["Bytový dizajn", "Materiály", "3D vizualizácie"],
           href: "/services/interior-design",
         },
+
         {
           num: "02",
           title: "Komerčný dizajn",
-                 obrazok:"/public/komercnepriestory.jpg",
+                 obrazok:"/projekty/SkyParkKoncept/SkyParkKoncept4.webp",
       
           desc: "Priestory pre firmy, kaviarne, reštaurácie a retail. Funkčné riešenia s dôrazom na brand identity.",
           tags: ["Kancelárie", "Reštaurácie", "Retail"],
           href: "/services/commercial-design",
         },
+
         {
           num: "03",
           title: "Exteriérový dizajn",
-       obrazok:"/public/exterierdesig.webp",
+       obrazok:  "/projekty/Intermezzo/Intermezzo3.webp",
           desc: "Terasy, fasády, záhradné koncepty a exteriérové architektonické riešenia.",
           tags: ["Terasy", "Fasády", "Záhrady"],
           href: "/services/exterior-design",

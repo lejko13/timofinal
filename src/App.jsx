@@ -29,21 +29,7 @@ function ScrollToTop() {
 }
 
 const AuthenticatedApp = () => {
-  // const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
-
-  // if (isLoadingPublicSettings || isLoadingAuth) {
-  //   return (
-  //     <div className="fixed inset-0 flex items-center justify-center bg-background">
-  //       <div className="w-6 h-6 border-2 border-border border-t-foreground rounded-full animate-spin" />
-  //     </div>
-  //   );
-  // }
-
-  // if (authError) {
-  //   if (authError.type === "user_not_registered") return <UserNotRegisteredError />;
-  //   if (authError.type === "auth_required") { navigateToLogin(); return null; }
-  // }
-
+ 
   return (
     <>
       <ScrollToTop />
